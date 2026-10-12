@@ -29,15 +29,35 @@ The `echo: false` option disables the printing of code (only output is displayed
 
 library(tidyverse) bond.data \<- read_csv("data/jamesbond.csv") bond.data
 
-# Which movie earned the most?
+\`\`\`
 
-bond.data \|\> select(Year, Movie, US_Gross) \|\> arrange(desc(US_Gross))
+# Which movie earned the most? {#sec-which-movie-earned-the-most}
+
+```{r}
+bond.data |>
+  
+  select(Year, Movie, US_Gross) |> 
+  arrange(desc(US_Gross))
+```
+
+\`\` \`{r}
+
+bond.data \|\>
+
+select(Year, Movie, US_Gross) \|\> arrange(desc(US_Gross))
+
+\`\` \`
 
 # The most profitable movie was Skyfall, made in 2012. It made a profit of about \$300 million.
 
 # Is there a correlation between budget and earnings?
 
-ggplot(bond.data, aes(x=Budget, y=US_Gross)) + geom_point() \# This doesn't account for inflation. Check: add colours for year?
+```{}
+```
+
+ggplot(bond.data, aes(x=Budget, y=US_Gross)) + geom_point()
+
+\# This doesn't account for inflation. Check: add colours for year?
 
 ggplot(bond.data, aes(x=Budget, y=US_Gross, color=Year)) + geom_point() + scale_color_continuous()
 
