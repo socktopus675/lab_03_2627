@@ -1,10 +1,8 @@
----
+------------------------------------------------------------------------
 
-title: "lab3"
-format: html
-editor: visual
+title: "lab3" format: html editor: visual
 
----
+------------------------------------------------------------------------
 
 ## Quarto
 
@@ -52,7 +50,7 @@ select(Year, Movie, US_Gross) \|\> arrange(desc(US_Gross))
 
 # Is there a correlation between budget and earnings?
 
-```{}
+```         
 ```
 
 ggplot(bond.data, aes(x=Budget, y=US_Gross)) + geom_point()
